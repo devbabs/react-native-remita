@@ -1,4 +1,4 @@
-package com.remita;
+package com.devbabs.reactnative.remita;
 
 import androidx.annotation.NonNull;
 

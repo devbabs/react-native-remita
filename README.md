@@ -1,21 +1,67 @@
 # react-native-remita
 
-This React Native module provides a wrapper to add Remita Payments to your React Native application using the Remita Android Mobile SDK And the Remita iOS Mobile SDK libraries.
+This React Native module provides a wrapper to add Remita Payments to your React Native application using the Remita [Android Mobile SDK](https://github.com/RemitaNet/remita-android) and the Remita iOS Mobile SDK libraries.
+
+## TODO (Coming Soon)
+- Add Support for iOS
 
 ## Installation
+This module currently works well on Android 👍🏽
 
 ```sh
 npm install react-native-remita
 ```
 
-## Usage
+## Setup
+Make sure you call this `Remita.init()` with correct arguments before calling `Remita.pay()`
 
 ```js
-import { multiply } from 'react-native-remita';
+import Remita from 'react-native-remita';
 
 // ...
 
-const result = await multiply(3, 7);
+Remita.init({
+      apiKey: YOUR_REMITA_PUBLIC_KEY, //Replace this with your own Remita Public Key
+      environment: 'demo'
+    })
+```
+
+## Usage
+You can trigger the `Remita.pay()` method when a button is pressed.
+Make sure you pass all required parameters to this method call.
+
+```js
+Remita.pay({
+  amount: 1000,
+  email: "babs@babs.dev",
+  phone: "+2349031863448",
+  firstName: "Babalola",
+  lastName: "Macaulay",
+  currencyCode: "NGN",
+  narration: "Test payment for this example",
+  paymentCompleted: (paymentResponse) => {
+    console.log("Payment completed", paymentResponse)
+     // Do whatever you want with `paymentResponse` object
+  }
+})
+```
+
+## Successful payment response
+You can trigger the `Remita.pay()` method when a button is pressed.
+Make sure you pass all required parameters to this method call.
+
+```js
+{
+  "paymentResponseData": {
+    "amount": "1000.0",
+    "message": "",
+    "paymentReference": "210010145765",
+    "processorId": "",
+    "transactionId": "710378586"
+  },
+  "responseCode": "00",
+  "responseMessage": "SUCCESS"
+}
 ```
 
 ## Contributing
@@ -26,6 +72,8 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 MIT
 
+#### Made with ❤️ by [Babs](https://babs.dev) 👨🏽‍💻😎
+#### Cheers 🥂
 ---
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

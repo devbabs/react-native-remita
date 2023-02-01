@@ -1,18 +1,37 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-remita';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import Remita from 'react-native-remita';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    Remita.init({
+      apiKey: "QzAwMDAxOTUwNjl8NDMyNTkxNjl8ZTg0MjI2MDg4MjU0NzA2NTY2MTYwNGU1NjNiMjUzYjk4ZDQwZjljZGFiMTVmYTljMDUwMGQ0MDg2MjIyYjEyNTA1ZTE2MTMxNmE3ZjM1OTZmYmJkOTE2MTRiY2NmZTY5NTM4MGQ2MDBlZGJlZmM2ODc2YTc2M2M4MjgyZmFjODc=",
+      environment: 'demo'
+    })
   }, []);
+
+  const payPressed = () => {
+    Remita.pay({
+      amount: 1000,
+      email: "babs@babs.dev",
+      phone: "+2349031863448",
+      firstName: "Babalola",
+      lastName: "Macaulay",
+      currencyCode: "NGN",
+      narration: "Test payment for this example",
+      paymentCompleted: (paymentResponse) => {
+        console.log("Payment completed", paymentResponse)
+      }
+    })
+  }
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        onPress={() => payPressed()}
+        title={'Pay Now'}
+      />
     </View>
   );
 }
@@ -22,10 +41,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+  }
 });

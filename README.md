@@ -22,8 +22,23 @@ import Remita from 'react-native-remita';
 
 Remita.init({
       apiKey: YOUR_REMITA_PUBLIC_KEY, //Replace this with your own Remita Public Key
-      environment: 'demo'
+      environment: 'demo' // demo or production
     })
+```
+#### Important ⚠️:
+###### Demo Setup:
+```
+{
+  'apiKey': TEST_PUBLIC_KEY`,
+  'environment': 'demo'
+}
+```
+###### Production Setup:
+```
+{
+  'apiKey': LIVE_PUBLIC_KEY`,
+  'environment': 'production'
+}
 ```
 
 ## Usage
@@ -33,8 +48,8 @@ Make sure you pass all required parameters to this method call.
 ```js
 Remita.pay({
   amount: 1000,
-  email: "babs@babs.dev",
-  phone: "+2349031863448",
+  email: "example@email.com",
+  phone: "+23412345678",
   firstName: "Babalola",
   lastName: "Macaulay",
   currencyCode: "NGN",

@@ -37,10 +37,14 @@ class Remita {
     environment?: 'demo' | 'production'
 	}) => {
 
+    console.log("Available native properties", this.nativeRemita)
+
     if ((String(apiKey).length > 0) && (environment == 'demo' || environment == 'production')) {
       // Initialize Remita API with apiKey and environment
+      if(Platform.OS == 'android') {
+        this.nativeRemita.init(apiKey, environment)
+      }
       this.apiKey = apiKey
-      this.nativeRemita.init(apiKey, environment)
       this.initialized = true
     } else {
       throw new Error("To initialize remita payment correctly, make sure you are calling init() and passing passing a correct apiKey with environment as 'demo' or 'production'.");
@@ -54,7 +58,7 @@ class Remita {
     }
   }
 
-	pay = ({
+	pay = async ({
     amount,
     email,
     phone,
@@ -77,17 +81,22 @@ class Remita {
   }) => {
     this.checkInitialized()
 
-    return this.nativeRemita.pay(
-      String(amount),
-      email,
-      phone,
-      firstName,
-      lastName,
-      currencyCode,
-      narration,
-      transactionId,
-      (paymentResponse: any) => paymentCompleted(paymentResponse)
-    )
+    if (Platform.OS == 'android') {
+      return this.nativeRemita.pay(
+        String(amount),
+        email,
+        phone,
+        firstName,
+        lastName,
+        currencyCode,
+        narration,
+        transactionId,
+        (paymentResponse: any) => paymentCompleted(paymentResponse)
+      )
+    } else {
+      console.log(`This package is not fully ready on iOS yet. Kindly visit the repository issues page on GitHub https://github.com/devbabs/react-native-remita/issues if you are willing to contribute and assist in making the iOS integration work.`)
+      return
+    }
 	}
 
 }

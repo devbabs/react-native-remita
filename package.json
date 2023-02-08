@@ -1,7 +1,7 @@
 {
   "name": "react-native-remita",
-  "version": "0.1.1",
-  "description": "This React Native module provides a wrapper to add Remita Payments to your React Native application using the Remita Android Mobile SDK and the Remita iOS Mobile SDK libraries.",
+  "version": "0.1.3",
+  "description": "This React Native module provides a wrapper to add Remita Payments to your (Android) React Native application using the Remita Android Mobile SDK library.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -38,8 +38,9 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "android",
+    "remita",
+    "payment"
   ],
   "repository": "https://github.com/devbabs/react-native-remita",
   "author": "Babalola Macaulay <babs@babs.dev> (https://github.com/devbabs)",

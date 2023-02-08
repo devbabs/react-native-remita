@@ -1,0 +1,35 @@
+            <!DOCTYPE html> 
+            <html lang="en"> 
+             <body  onload="makePayment()"> 
+              <script> 
+              function makePayment() {
+                  var transId = Math.floor(Math.random() * 100);
+                  
+                  var paymentEngine = RmPaymentEngine.init({
+                key:'QzAwMDAxOTUwNjl8NDMyNTkxNjl8ZTg0MjI2MDg4MjU0NzA2NTY2MTYwNGU1NjNiMjUzYjk4ZDQwZjljZGFiMTVmYTljMDUwMGQ0MDg2MjIyYjEyNTA1ZTE2MTMxNmE3ZjM1OTZmYmJkOTE2MTRiY2NmZTY5NTM4MGQ2MDBlZGJlZmM2ODc2YTc2M2M4MjgyZmFjODc=',
+                transactionId: transId,
+                email: "diagboya@systemspecs.com.ng",
+                currency: "NGN", 
+                firstName: "Lisa",
+                lastName: "Spark",
+				customerId: "diagboya@systemspecs.com.ng",
+				phoneNumber: "0806749379711",
+                narration: "Bugati Centodieci", 
+                amount: "100",
+                                   
+                onSuccess: function (response) { 
+                    console.log(JSON.stringify(response)); 
+                 }, 
+                onError: function (response) { 
+                    console.log(JSON.stringify(response)); 
+                 }, 
+                onClose: function () { 
+                    console.log("closed"); 
+                 },                  
+                }); 
+                paymentEngine.openIframe(); 
+                        } 
+                    </script> 
+                     <script type="text/javascript" src="https://remitademo.net/payment/v1/remita-pay-inline.bundle.js"\></script> 
+                </body> 
+              </html>

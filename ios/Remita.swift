@@ -1,3 +1,5 @@
+//import RemitaPaymentGateway
+
 @objc(Remita)
 class Remita: NSObject {
 

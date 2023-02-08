@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
+#import <RemitaPaymentGateway/RemitaPaymentGateway.h>
 
 @implementation AppDelegate
 

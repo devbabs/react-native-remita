@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController" customModule="RemitaPaymentGateway" customModuleProvider="target">
+            <connections>
+                <outlet property="circleView" destination="Pca-it-hYM" id="6gl-kh-3lw"/>
+                <outlet property="view" destination="5kT-lK-vuK" id="Lep-Rk-qom"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5kT-lK-vuK">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf9-Xs-gdj" userLabel="Container View">
+                    <rect key="frame" x="30" y="83.5" width="315" height="500"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pca-it-hYM" customClass="CircleLoaderView" customModule="RemitaPaymentGateway" customModuleProvider="target">
+                            <rect key="frame" x="122.5" y="215" width="70" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="8Gl-9O-iYU"/>
+                                <constraint firstAttribute="height" constant="70" id="FfL-Lj-xrm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="600" id="9UM-Yy-hl6"/>
+                        <constraint firstItem="Pca-it-hYM" firstAttribute="centerY" secondItem="Zf9-Xs-gdj" secondAttribute="centerY" id="Ejp-ye-PqR"/>
+                        <constraint firstItem="Pca-it-hYM" firstAttribute="centerX" secondItem="Zf9-Xs-gdj" secondAttribute="centerX" id="FMT-Qf-UrH"/>
+                        <constraint firstAttribute="width" constant="320" id="aDz-OE-v9s"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9UM-Yy-hl6"/>
+                            <exclude reference="aDz-OE-v9s"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact">
+                        <mask key="constraints">
+                            <include reference="aDz-OE-v9s"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="9UM-Yy-hl6"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75481404050000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="height" secondItem="5kT-lK-vuK" secondAttribute="height" multiplier="95%" id="1Ac-za-kyY"/>
+                <constraint firstItem="Hl8-2t-IZ1" firstAttribute="trailing" secondItem="Zf9-Xs-gdj" secondAttribute="trailing" constant="30" id="6S7-xe-KQ5"/>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="height" secondItem="5kT-lK-vuK" secondAttribute="height" multiplier="74%" id="AY0-bf-Wjn"/>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="centerX" secondItem="5kT-lK-vuK" secondAttribute="centerX" id="Nhc-59-QgP"/>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="centerY" secondItem="5kT-lK-vuK" secondAttribute="centerY" id="d8t-uy-Cif"/>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="leading" secondItem="Hl8-2t-IZ1" secondAttribute="leading" constant="30" id="q92-v2-Oxv"/>
+                <constraint firstItem="Zf9-Xs-gdj" firstAttribute="height" secondItem="5kT-lK-vuK" secondAttribute="height" multiplier="75%" id="zpG-Ip-Vaj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Hl8-2t-IZ1"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="6S7-xe-KQ5"/>
+                    <exclude reference="1Ac-za-kyY"/>
+                    <exclude reference="AY0-bf-Wjn"/>
+                    <exclude reference="q92-v2-Oxv"/>
+                    <exclude reference="zpG-Ip-Vaj"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="constraints">
+                    <include reference="1Ac-za-kyY"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="6S7-xe-KQ5"/>
+                    <include reference="q92-v2-Oxv"/>
+                    <include reference="zpG-Ip-Vaj"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="AY0-bf-Wjn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="138.5" y="-75.5"/>
+        </view>
+    </objects>
+</document>

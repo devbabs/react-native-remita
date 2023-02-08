@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* Remita.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Remita.m */; };
-		F4FF95D7245B92E800C19C63 /*  Remita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  Remita.swift */; };
+		F4FF95D7245B92E800C19C63 /* Remita.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* Remita.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1B403752992A9C9007FCFF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B403702992A9C9007FCFF3 /* RemitaPaymentGateway.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6015AA06203479AE00476321;
+			remoteInfo = RemitaPaymentGateway;
+		};
+		D1B403772992A9C9007FCFF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1B403702992A9C9007FCFF3 /* RemitaPaymentGateway.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6015AA0F203479AE00476321;
+			remoteInfo = RemitaPaymentGatewayTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
@@ -26,6 +42,7 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRemita.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRemita.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* Remita.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Remita.m; sourceTree = "<group>"; };
+		D1B403702992A9C9007FCFF3 /* RemitaPaymentGateway.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RemitaPaymentGateway.xcodeproj; path = "../../../../Downloads/remita-ios-sdk-master/RemitaPaymentGateway.xcodeproj"; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* Remita-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Remita-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* Remita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remita.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,7 +73,25 @@
 				B3E7B5891CC2AC0600A0062D /* Remita.m */,
 				F4FF95D5245B92E700C19C63 /* Remita-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				D1B962CD299290DD0024860A /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		D1B403712992A9C9007FCFF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1B403762992A9C9007FCFF3 /* RemitaPaymentGateway.framework */,
+				D1B403782992A9C9007FCFF3 /* RemitaPaymentGatewayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1B962CD299290DD0024860A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1B403702992A9C9007FCFF3 /* RemitaPaymentGateway.xcodeproj */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,10 +135,17 @@
 			knownRegions = (
 				English,
 				en,
+				Base,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D1B403712992A9C9007FCFF3 /* Products */;
+					ProjectRef = D1B403702992A9C9007FCFF3 /* RemitaPaymentGateway.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* Remita */,
@@ -111,13 +153,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D1B403762992A9C9007FCFF3 /* RemitaPaymentGateway.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RemitaPaymentGateway.framework;
+			remoteRef = D1B403752992A9C9007FCFF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1B403782992A9C9007FCFF3 /* RemitaPaymentGatewayTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RemitaPaymentGatewayTests.xctest;
+			remoteRef = D1B403772992A9C9007FCFF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* Remita.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* Remita.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

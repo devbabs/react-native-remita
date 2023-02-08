@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7LT-di-qjr">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="msL-Eu-Vol">
+            <objects>
+                <viewController id="7LT-di-qjr" customClass="ViewController" customModule="RemitaPaymentGatewayExampleSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W6s-OO-yXo"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIT-1J-3qV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="61H-OA-yZB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkD-Fg-SkQ">
+                                <rect key="frame" x="0.0" y="24" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h8b-UX-p6E">
+                                        <rect key="frame" x="141.66666666666666" y="18.666666666666664" width="92" height="22.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36U-63-rGD">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16m-RC-eWK">
+                                                <rect key="frame" x="59" y="0.0" width="33" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.80230629279999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="h8b-UX-p6E" firstAttribute="centerY" secondItem="xkD-Fg-SkQ" secondAttribute="centerY" id="LZ3-9r-caL"/>
+                                    <constraint firstAttribute="height" constant="60" id="gfa-zH-N7J">
+                                        <variation key="heightClass=compact" constant="45"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                    </constraint>
+                                    <constraint firstItem="h8b-UX-p6E" firstAttribute="centerX" secondItem="xkD-Fg-SkQ" secondAttribute="centerX" id="zFl-NE-1VK"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bag" translatesAutoresizingMaskIntoConstraints="NO" id="SoK-cq-d28">
+                                <rect key="frame" x="52.666666666666657" y="121" width="270" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="YPU-LM-lwC">
+                                        <variation key="heightClass=compact" constant="150"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="200"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="270" id="cgb-AE-zkO">
+                                        <variation key="heightClass=compact" constant="240"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="470"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kenneth Cole Brown Leather Reaction Colombian Leather Duffel Bag" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T7-KL-Msx">
+                                <rect key="frame" x="63.666666666666671" y="398" width="247.66666666666663" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NGN 52731.39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8w-pt-qa9">
+                                <rect key="frame" x="128" y="449.66666666666669" width="119.33333333333331" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W88-E3-0nw">
+                                <rect key="frame" x="112.66666666666669" y="496" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.59830874199999995" green="0.21638417239999999" blue="0.21442845460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="DVf-lN-zPc">
+                                        <variation key="heightClass=compact" constant="120"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="45" id="TEB-rl-9GO">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="PAY">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                </variation>
+                                <connections>
+                                    <action selector="payButton:" destination="7LT-di-qjr" eventType="touchUpInside" id="v2f-HK-7hx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.79770440919999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z8w-pt-qa9" firstAttribute="centerX" secondItem="61H-OA-yZB" secondAttribute="centerX" id="EAg-L4-nQ2"/>
+                            <constraint firstItem="SoK-cq-d28" firstAttribute="top" secondItem="xkD-Fg-SkQ" secondAttribute="bottom" constant="37" id="EC6-61-126">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="110"/>
+                            </constraint>
+                            <constraint firstItem="z8w-pt-qa9" firstAttribute="top" secondItem="4T7-KL-Msx" secondAttribute="bottom" constant="18" id="Y6B-Wa-LMd">
+                                <variation key="heightClass=compact" constant="12"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                            </constraint>
+                            <constraint firstItem="W88-E3-0nw" firstAttribute="centerX" secondItem="61H-OA-yZB" secondAttribute="centerX" id="ZYT-h2-HrG"/>
+                            <constraint firstItem="4T7-KL-Msx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="61H-OA-yZB" secondAttribute="leading" constant="50" id="a72-b9-p3x">
+                                <variation key="heightClass=compact" constant="150"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="SoK-cq-d28" firstAttribute="centerX" secondItem="61H-OA-yZB" secondAttribute="centerX" id="ddf-HY-nk6"/>
+                            <constraint firstItem="W88-E3-0nw" firstAttribute="top" secondItem="z8w-pt-qa9" secondAttribute="bottom" constant="26" id="g3E-ja-uRk">
+                                <variation key="heightClass=compact" constant="15"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="18"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4T7-KL-Msx" secondAttribute="trailing" constant="50" id="hZS-hg-UFE">
+                                <variation key="heightClass=compact" constant="150"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="4T7-KL-Msx" firstAttribute="top" secondItem="SoK-cq-d28" secondAttribute="bottom" constant="37" id="hx7-Qp-uXR">
+                                <variation key="heightClass=compact" constant="20"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="4T7-KL-Msx" firstAttribute="centerX" secondItem="61H-OA-yZB" secondAttribute="centerX" id="iEx-d8-ggr"/>
+                            <constraint firstItem="xkD-Fg-SkQ" firstAttribute="top" secondItem="W6s-OO-yXo" secondAttribute="bottom" constant="-20" id="s7O-yH-AKZ"/>
+                            <constraint firstItem="xkD-Fg-SkQ" firstAttribute="trailing" secondItem="61H-OA-yZB" secondAttribute="trailing" id="uEF-V0-Bo8"/>
+                            <constraint firstItem="xkD-Fg-SkQ" firstAttribute="leading" secondItem="61H-OA-yZB" secondAttribute="leading" id="zjp-tW-FPg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="51J-fa-ao0"/>
+                    </view>
+                    <connections>
+                        <segue destination="dVg-QA-MxS" kind="show" identifier="completion" id="hy5-rL-9T5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPL-2o-aEL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.934032983508249" y="32.799999999999997"/>
+        </scene>
+        <!--Completion View Controller-->
+        <scene sceneID="CVc-69-qyU">
+            <objects>
+                <viewController id="dVg-QA-MxS" customClass="CompletionViewController" customModule="RemitaPaymentGatewayExampleSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PLp-6v-iRP"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLf-6n-awr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="41j-3w-6mA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avg-16-1tC">
+                                <rect key="frame" x="0.0" y="24" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mk7-mT-LHg">
+                                        <rect key="frame" x="141.66666666666666" y="18.666666666666664" width="92" height="22.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlS-eH-bKa">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uo-Dg-vSQ">
+                                                <rect key="frame" x="59" y="0.0" width="33" height="22.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="17"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Mk7-mT-LHg" firstAttribute="centerY" secondItem="avg-16-1tC" secondAttribute="centerY" id="06b-fW-Ya1"/>
+                                    <constraint firstItem="Mk7-mT-LHg" firstAttribute="centerX" secondItem="avg-16-1tC" secondAttribute="centerX" id="0fy-yT-39J"/>
+                                    <constraint firstAttribute="height" constant="60" id="kxy-pV-smr">
+                                        <variation key="heightClass=compact" constant="45"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="bhb-0C-MKr">
+                                <rect key="frame" x="116.00000000000001" y="204" width="143.33333333333337" height="144"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction Successful " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMV-6H-mHB">
+                                <rect key="frame" x="85.000000000000014" y="388" width="205.33333333333337" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBg-Je-adi">
+                                <rect key="frame" x="112.66666666666669" y="465" width="150" height="45"/>
+                                <color key="backgroundColor" red="0.59830874199999995" green="0.21638417239999999" blue="0.21442845460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="4Ip-tU-BJR">
+                                        <variation key="heightClass=compact" constant="120"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="220"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="45" id="BFh-fl-nqs">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="PAY AGAIN">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                </variation>
+                                <connections>
+                                    <action selector="payAgain:" destination="dVg-QA-MxS" eventType="touchUpInside" id="HvZ-TU-evh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="avg-16-1tC" firstAttribute="trailing" secondItem="41j-3w-6mA" secondAttribute="trailing" id="2aE-lF-7RL"/>
+                            <constraint firstItem="NMV-6H-mHB" firstAttribute="top" secondItem="bhb-0C-MKr" secondAttribute="bottom" constant="40" id="E1R-ms-TDZ"/>
+                            <constraint firstItem="avg-16-1tC" firstAttribute="leading" secondItem="41j-3w-6mA" secondAttribute="leading" id="EoD-al-HhC"/>
+                            <constraint firstItem="tBg-Je-adi" firstAttribute="top" secondItem="NMV-6H-mHB" secondAttribute="bottom" constant="53" id="FXR-pf-hEo"/>
+                            <constraint firstItem="tBg-Je-adi" firstAttribute="centerX" secondItem="41j-3w-6mA" secondAttribute="centerX" id="WDd-pT-EA6"/>
+                            <constraint firstItem="avg-16-1tC" firstAttribute="top" secondItem="PLp-6v-iRP" secondAttribute="bottom" constant="-20" id="Zc3-Pe-hsn"/>
+                            <constraint firstItem="bhb-0C-MKr" firstAttribute="centerX" secondItem="41j-3w-6mA" secondAttribute="centerX" id="czA-Dt-krE"/>
+                            <constraint firstItem="NMV-6H-mHB" firstAttribute="centerX" secondItem="41j-3w-6mA" secondAttribute="centerX" id="e8Q-A3-XM4"/>
+                            <constraint firstItem="bhb-0C-MKr" firstAttribute="top" secondItem="avg-16-1tC" secondAttribute="bottom" constant="120" id="q8A-pw-dWr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gXC-xK-s9L"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bhb-0C-MKr" id="C5Q-ss-tPH"/>
+                        <outlet property="statusLabel" destination="NMV-6H-mHB" id="T2d-rZ-h9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSh-xS-uua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986.95652173913049" y="32.608695652173914"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag" width="361.33334350585938" height="320"/>
+        <image name="success" width="143.33332824707031" height="144"/>
+    </resources>
+</document>

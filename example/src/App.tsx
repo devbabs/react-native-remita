@@ -21,7 +21,7 @@ export default function App() {
       currencyCode: 'NGN',
       narration: 'Test payment for this example',
       paymentCompleted: (paymentResponse) => {
-        console.log("Payment completed", paymentResponse)
+        console.log("Payment completed", paymentResponse);
       }
     })
   }

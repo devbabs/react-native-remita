@@ -1,4 +1,5 @@
 #import <React/RCTBridgeModule.h>
+//#import <RemitaPaymentGateway/RemitaPaymentGateway.h>
 
 @interface RCT_EXTERN_MODULE(Remita, NSObject)
 

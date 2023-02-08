@@ -5,6 +5,8 @@ This React Native module provides a wrapper to add Remita Payments to your React
 ## TODO (Coming Soon)
 - Add Support for iOS
 
+![Android Screenshot for react-native-remita Payment Screen](screenshot.png)
+
 ## Installation
 This module currently works well on Android 👍🏽
 
